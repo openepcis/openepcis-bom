@@ -21,7 +21,7 @@ limitations under the License.
 
     <groupId>io.openepcis</groupId>
     <artifactId>openepcis-bom</artifactId>
-    <version>0.9.1</version>
+    <version>0.9.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>openepcis-bom</name>
@@ -69,6 +69,7 @@ limitations under the License.
         <git-code-format-maven-plugin.version>3.4</git-code-format-maven-plugin.version>
         <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
         <checkstyle.version>10.3</checkstyle.version>
+        <gpg.keyname>759F1D2BF6B65D135FAD2716A355F274126C92B8</gpg.keyname>
 
         <org.everit.json.schema.version>1.12.2</org.everit.json.schema.version>
         <jacoco.version>0.8.7</jacoco.version>
@@ -114,10 +115,10 @@ limitations under the License.
         <mutiny.version>1.1.2</mutiny.version>
         <org.json.version>20190722</org.json.version>
         <handy-uri-templates.version>2.1.7</handy-uri-templates.version>
-        <jetcd-core.version>0.6.1</jetcd-core.version>
+        <jetcd-core.version>0.7.1</jetcd-core.version>
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>2.9.2.Final</quarkus.platform.version>
+        <quarkus.platform.version>2.10.2.Final</quarkus.platform.version>
         <jandex-maven-plugin.version>1.1.0</jandex-maven-plugin.version>
         <org.glassfish.tyrus.version>1.1</org.glassfish.tyrus.version>
         <jakarta.activation-api.version>1.2.2</jakarta.activation-api.version>
@@ -125,8 +126,8 @@ limitations under the License.
         <jaxb-xjc.version>2.3.4</jaxb-xjc.version>
         <mbknor-jackson-jsonschema_2.13>1.0.39</mbknor-jackson-jsonschema_2.13>
         <res-assured.version>4.4.0</res-assured.version>
-        <io.quarkiverse.amazonservices.version>1.0.3</io.quarkiverse.amazonservices.version>
-        <software.amazon.awssdk.version>2.17.113</software.amazon.awssdk.version>
+        <io.quarkiverse.amazonservices.version>1.1.2</io.quarkiverse.amazonservices.version>
+        <software.amazon.awssdk.version>2.17.233</software.amazon.awssdk.version>
         <joda-time.version>2.10.8</joda-time.version>
         <reactor-core.version>3.4.14</reactor-core.version>
         <jobrunr.version>4.0.6</jobrunr.version>
@@ -697,6 +698,70 @@ limitations under the License.
                     </licenseSets>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.7</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                        <configuration>
+                            <keyname>${gpg.keyname}</keyname>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>openepcis-ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>openepcis-ossrh</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 </project>
