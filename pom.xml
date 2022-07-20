@@ -21,7 +21,7 @@ limitations under the License.
 
     <groupId>io.openepcis</groupId>
     <artifactId>openepcis-bom</artifactId>
-    <version>0.9.0</version>
+    <version>0.9.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>openepcis-bom</name>
