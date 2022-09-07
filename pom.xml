@@ -106,8 +106,8 @@
         <log4j-slf4j-impl.version>2.17.1</log4j-slf4j-impl.version>
 
         <!-- XML <-> JSON conversion dependency versions -->
-        <jaxb.version>3.0.1</jaxb.version>
-        <jsonSchemaValidator.version>3.0.1</jsonSchemaValidator.version>
+        <jakarta.xml.bind.version>3.0.1</jakarta.xml.bind.version>
+        <eclipse-persistence.version>3.0.3</eclipse-persistence.version>
 
         <!-- test lib versions -->
         <junit4.version>4.13.2</junit4.version>
@@ -308,12 +308,17 @@
             <dependency>
                 <groupId>jakarta.xml.bind</groupId>
                 <artifactId>jakarta.xml.bind-api</artifactId>
-                <version>${jaxb.version}</version>
+                <version>${jakarta.xml.bind.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.persistence</groupId>
                 <artifactId>eclipselink</artifactId>
-                <version>${jaxb.version}</version>
+                <version>${eclipse-persistence.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.persistence</groupId>
+                <artifactId>org.eclipse.persistence.moxy</artifactId>
+                <version>${eclipse-persistence.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.java-json-tools</groupId>
