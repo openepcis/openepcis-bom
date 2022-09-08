@@ -140,6 +140,8 @@
         <joda-time.version>2.10.8</joda-time.version>
         <reactor-core.version>3.4.14</reactor-core.version>
         <jobrunr.version>4.0.6</jobrunr.version>
+        <jakarta.json-api.version>2.1.1</jakarta.json-api.version>
+        <parsson.version>1.1.1</parsson.version>
     </properties>
 
     <dependencyManagement>
@@ -325,19 +327,26 @@
                 <artifactId>json-schema-validator</artifactId>
                 <version>${json-schema-validator.version}</version>
             </dependency>
-
-            <!-- Log invalid and other messages during the XML <-> JSON conversion -->
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-slf4j-impl</artifactId>
                 <version>${log4j-slf4j-impl.version}</version>
                 <scope>test</scope>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-core</artifactId>
-                <version>2.17.1</version>
+                <version>2.17.2</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.json</groupId>
+                <artifactId>jakarta.json-api</artifactId>
+                <version>${jakarta.json-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.parsson</groupId>
+                <artifactId>parsson</artifactId>
+                <version>${parsson.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.json</groupId>
