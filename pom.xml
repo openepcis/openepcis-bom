@@ -636,10 +636,23 @@
         </pluginManagement>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.4.0</version>
+            </plugin>
+            <plugin>
                 <groupId>com.cosium.code</groupId>
                 <artifactId>git-code-format-maven-plugin</artifactId>
                 <version>${git-code-format-maven-plugin.version}</version>
                 <executions>
+                    <!-- format code when processing resources -->
+                    <execution>
+                        <id>format</id>
+                        <goals>
+                            <goal>format-code</goal>
+                        </goals>
+                        <phase>process-resources</phase>
+                    </execution>
                     <!-- On commit, format the modified java files -->
                     <execution>
                         <id>install-formatter-hook</id>
