@@ -119,14 +119,14 @@
         <failsafe-plugin.version>3.0.0-M5</failsafe-plugin.version>
         <barcode4j.version>2.1</barcode4j.version>
         <json-schema-validator.version>2.2.14</json-schema-validator.version>
-        <mutiny.version>1.1.2</mutiny.version>
+        <mutiny.version>1.8.0</mutiny.version>
         <org.json.version>20190722</org.json.version>
         <handy-uri-templates.version>2.1.7</handy-uri-templates.version>
         <jetcd-core.version>0.7.1</jetcd-core.version>
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <!-- stick with 2.11.x for now - need to investigate what's wrong with jaxb 3.x jakarta.xml.bind-api -->
-        <quarkus.platform.version>2.11.3.Final</quarkus.platform.version>
+        <quarkus.platform.version>2.15.2.Final</quarkus.platform.version>
         <jandex-maven-plugin.version>1.1.0</jandex-maven-plugin.version>
         <org.glassfish.tyrus.version>1.1</org.glassfish.tyrus.version>
         <jakarta.activation-api.version>1.2.2</jakarta.activation-api.version>
