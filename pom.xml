@@ -65,7 +65,7 @@
 
     <properties>
         <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
-        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>17</java.version>
         <maven.compiler.release>${java.version}</maven.compiler.release>
@@ -126,7 +126,8 @@
         <jetcd-core.version>0.7.1</jetcd-core.version>
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>2.15.3.Final</quarkus.platform.version>
+        <quarkus.platform.version>2.16.0.Final</quarkus.platform.version>
+        <quarkus-extension-plugin.version>0.26.1</quarkus-extension-plugin.version>
         <jandex-maven-plugin.version>1.1.0</jandex-maven-plugin.version>
         <org.glassfish.tyrus.version>1.1</org.glassfish.tyrus.version>
         <jakarta.activation-api.version>1.2.2</jakarta.activation-api.version>
@@ -429,6 +430,11 @@
                 <version>${quarkus.platform.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-extension-plugin</artifactId>
+                <version>${quarkus-extension-plugin.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.quarkus</groupId>
