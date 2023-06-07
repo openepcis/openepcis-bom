@@ -380,11 +380,6 @@
                 <version>${titanium-json-ld.version}</version>
             </dependency>
             <dependency>
-                <groupId>jakarta.json</groupId>
-                <artifactId>jakarta.json-api</artifactId>
-                <version>${jakarta.json-api.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>io.smallrye.reactive</groupId>
                 <artifactId>mutiny</artifactId>
                 <version>${mutiny.version}</version>
