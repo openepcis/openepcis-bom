@@ -110,14 +110,14 @@
 
         <!-- test lib versions -->
         <junit4.version>4.13.2</junit4.version>
-        <junit.version>5.6.2</junit.version>
+        <junit.version>5.9.2</junit.version>
         <junit-platform-runner.version>1.6.2</junit-platform-runner.version>
         <mockito-junit-jupiter.version>3.3.3</mockito-junit-jupiter.version>
         <hamcrest-junit.version>2.0.0.0</hamcrest-junit.version>
         <powermock-api-mockito2.version>2.0.7</powermock-api-mockito2.version>
         <io.jsonwebtoken.version>0.11.2</io.jsonwebtoken.version>
-        <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
-        <failsafe-plugin.version>3.0.0-M5</failsafe-plugin.version>
+        <surefire-plugin.version>3.1.2</surefire-plugin.version>
+        <failsafe-plugin.version>3.1.2</failsafe-plugin.version>
         <barcode4j.version>2.1</barcode4j.version>
         <json-schema-validator.version>2.2.14</json-schema-validator.version>
         <mutiny.version>2.2.0</mutiny.version>
@@ -127,7 +127,7 @@
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <!--    When updating, need to keep the graalvm.version in sync.     -->
-        <quarkus.platform.version>3.1.1.Final</quarkus.platform.version>
+        <quarkus.platform.version>3.2.0.Final</quarkus.platform.version>
         <quarkus-extension-plugin.version>0.26.1</quarkus-extension-plugin.version>
         <jandex-maven-plugin.version>1.2.3</jandex-maven-plugin.version>
         <org.glassfish.tyrus.version>1.1</org.glassfish.tyrus.version>
