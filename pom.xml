@@ -140,7 +140,7 @@
         <software.amazon.awssdk.version>2.20.119</software.amazon.awssdk.version>
         <joda-time.version>2.10.8</joda-time.version>
         <reactor-core.version>3.4.14</reactor-core.version>
-        <jobrunr.version>6.2.1</jobrunr.version>
+        <jobrunr.version>6.3.0</jobrunr.version>
         <jakarta.json-api.version>2.1.1</jakarta.json-api.version>
         <parsson.version>1.1.1</parsson.version>
     </properties>
