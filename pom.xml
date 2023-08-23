@@ -104,7 +104,7 @@
 
         <!-- XML <-> JSON conversion dependency versions -->
         <jakarta.xml.bind.version>4.0.0</jakarta.xml.bind.version>
-        <eclipse-persistence.version>4.0.0</eclipse-persistence.version>
+        <eclipse-persistence.version>4.0.2</eclipse-persistence.version>
 
         <elasticsearch-java-client.version>8.5.0</elasticsearch-java-client.version>
 
