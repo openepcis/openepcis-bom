@@ -81,7 +81,7 @@
         <gpg.keyname>759F1D2BF6B65D135FAD2716A355F274126C92B8</gpg.keyname>
 
         <org.everit.json.schema.version>1.12.2</org.everit.json.schema.version>
-        <jacoco.version>0.8.7</jacoco.version>
+        <jacoco.version>0.8.10</jacoco.version>
         <lombok.version>1.18.28</lombok.version>
         <consul.client.version>1.5.3</consul.client.version>
         <javax.validation.api.version>2.0.0.Final</javax.validation.api.version>
@@ -800,6 +800,29 @@
                                         <arg>loopback</arg>
                                     </gpgArguments>
                                 </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>coverage</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <version>${jacoco.version}</version>
+                        <executions>
+                            <execution>
+                                <id>prepare-agent</id>
+                                <goals>
+                                    <goal>prepare-agent</goal>
+                                </goals>
                             </execution>
                         </executions>
                     </plugin>
