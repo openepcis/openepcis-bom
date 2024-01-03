@@ -23,7 +23,7 @@
 
     <groupId>io.openepcis</groupId>
     <artifactId>openepcis-bom</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.9.1</version>
     <packaging>pom</packaging>
 
     <name>openepcis-bom</name>
@@ -56,6 +56,10 @@
         <repository>
             <id>sonatype-staging</id>
             <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
         </repository>
     </repositories>
 
