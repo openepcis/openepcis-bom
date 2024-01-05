@@ -122,7 +122,7 @@
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <!--    When updating, need to keep the graalvm.version in sync.     -->
-        <quarkus.platform.version>3.2.7.Final</quarkus.platform.version>
+        <quarkus.platform.version>3.2.9.Final</quarkus.platform.version>
         <quarkus-extension-plugin.version>0.26.1</quarkus-extension-plugin.version>
         <jandex-maven-plugin.version>1.2.3</jandex-maven-plugin.version>
         <org.glassfish.tyrus.version>1.1</org.glassfish.tyrus.version>
@@ -137,7 +137,8 @@
         <reactor-core.version>3.4.14</reactor-core.version>
         <jobrunr.version>6.3.0</jobrunr.version>
         <jakarta.json-api.version>2.1.1</jakarta.json-api.version>
-        <parsson.version>1.1.1</parsson.version>
+        <parsson.version>1.1.5</parsson.version>
+        <testng.version>7.7.1</testng.version>
     </properties>
 
     <dependencyManagement>
@@ -575,7 +576,7 @@
             <dependency>
                 <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-micrometer-registry-prometheus</artifactId>
-                <version>2.7.0.Final</version>
+                <version>${quarkus.platform.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.quarkus</groupId>
@@ -586,6 +587,11 @@
                 <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-jdbc-postgresql</artifactId>
                 <version>${quarkus.platform.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${testng.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
