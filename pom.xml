@@ -85,7 +85,7 @@
         <javax.validation.api.version>2.0.0.Final</javax.validation.api.version>
         <javax.annotation-api.version>1.3.2</javax.annotation-api.version>
         <io.swagger.version>1.5.20</io.swagger.version>
-        <graalvm.version>23.0.3</graalvm.version>
+        <graalvm.version>23.1.2</graalvm.version>
         <chrisvest.stormpot.version>3.1</chrisvest.stormpot.version>
         <guava-retrying.version>2.0.0</guava-retrying.version>
         <commons.collections.version>4.4</commons.collections.version>
@@ -123,23 +123,23 @@
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <!--    When updating, need to keep the graalvm.version in sync.     -->
-        <quarkus.platform.version>3.7.4</quarkus.platform.version>
+        <quarkus.platform.version>3.8.3</quarkus.platform.version>
         <quarkus-extension-plugin.version>0.26.1</quarkus-extension-plugin.version>
-        <jandex-maven-plugin.version>1.2.3</jandex-maven-plugin.version>
+        <jandex-maven-plugin.version>3.1.6</jandex-maven-plugin.version>
         <org.glassfish.tyrus.version>1.1</org.glassfish.tyrus.version>
         <jakarta.activation-api.version>2.1.2</jakarta.activation-api.version>
         <org.glassfish.jaxb-core.version>4.0.1</org.glassfish.jaxb-core.version>
         <org.glassfish.jaxb-xjc.version>4.0.1</org.glassfish.jaxb-xjc.version>
         <mbknor-jackson-jsonschema_2.13>1.0.39</mbknor-jackson-jsonschema_2.13>
         <rest-assured.version>5.2.0</rest-assured.version>
-        <quarkus-amazon-services.version>2.11.1</quarkus-amazon-services.version>
+        <quarkus-amazon-services.version>2.12.2</quarkus-amazon-services.version>
         <joda-time.version>2.10.8</joda-time.version>
         <reactor-core.version>3.4.14</reactor-core.version>
-        <jobrunr.version>6.3.0</jobrunr.version>
+        <jobrunr.version>6.3.5</jobrunr.version>
         <jakarta.json-api.version>2.1.1</jakarta.json-api.version>
         <parsson.version>1.1.5</parsson.version>
         <testng.version>7.7.1</testng.version>
-        <quarkus-opensearch-java-client.version>1.5.0</quarkus-opensearch-java-client.version>
+        <quarkus-opensearch-java-client.version>1.6.1</quarkus-opensearch-java-client.version>
         <org.eclipse.persistence.asm.version>9.6.0</org.eclipse.persistence.asm.version>
     </properties>
 
@@ -334,13 +334,8 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>org.graalvm.js</groupId>
-                <artifactId>js</artifactId>
-                <version>${graalvm.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.graalvm.js</groupId>
-                <artifactId>js-scriptengine</artifactId>
+                <groupId>org.graalvm.polyglot</groupId>
+                <artifactId>js-community</artifactId>
                 <version>${graalvm.version}</version>
             </dependency>
             <dependency>
@@ -611,7 +606,7 @@
                     <version>${jacoco.version}</version>
                 </plugin>
                 <plugin>
-                    <groupId>org.jboss.jandex</groupId>
+                    <groupId>io.smallrye</groupId>
                     <artifactId>jandex-maven-plugin</artifactId>
                     <version>${jandex-maven-plugin.version}</version>
                 </plugin>
@@ -713,7 +708,7 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.jboss.jandex</groupId>
+                <groupId>io.smallrye</groupId>
                 <artifactId>jandex-maven-plugin</artifactId>
                 <executions>
                     <execution>
