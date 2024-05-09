@@ -139,7 +139,7 @@
         <jakarta.json-api.version>2.1.1</jakarta.json-api.version>
         <parsson.version>1.1.5</parsson.version>
         <testng.version>7.7.1</testng.version>
-        <quarkus-opensearch-java-client.version>1.6.1</quarkus-opensearch-java-client.version>
+        <quarkus-opensearch-java-client.version>1.6.3</quarkus-opensearch-java-client.version>
         <org.eclipse.persistence.asm.version>9.6.0</org.eclipse.persistence.asm.version>
     </properties>
 
