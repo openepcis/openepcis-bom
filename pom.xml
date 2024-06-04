@@ -60,50 +60,48 @@
     </repositories>
 
     <properties>
-        <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
-        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <nexus-staging-maven-plugin.version>1.6.14</nexus-staging-maven-plugin.version>
+        <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>17</java.version>
         <maven.compiler.release>${java.version}</maven.compiler.release>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
+        <maven-deploy-plugin.version>3.1.2</maven-deploy-plugin.version>
         <git-code-format-maven-plugin.version>4.2</git-code-format-maven-plugin.version>
         <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
-        <maven-javadoc-plugin.version>3.4.0</maven-javadoc-plugin.version>
-        <maven-source-plugin.version>2.2.1</maven-source-plugin.version>
-        <maven-gpg-plugin.version>1.5</maven-gpg-plugin.version>
-        <checkstyle.version>10.3</checkstyle.version>
+        <maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
+        <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
+        <maven-gpg-plugin.version>3.2.4</maven-gpg-plugin.version>
+        <checkstyle.version>10.16.0</checkstyle.version>
         <gpg.keyname>759F1D2BF6B65D135FAD2716A355F274126C92B8</gpg.keyname>
 
         <!-- 1.3.x is causing issues with quarkus native builds -->
         <com.networknt.json.schema.version>1.2.0</com.networknt.json.schema.version>
 
-        <jacoco.version>0.8.10</jacoco.version>
-        <lombok.version>1.18.30</lombok.version>
-        <consul.client.version>1.5.3</consul.client.version>
-        <javax.validation.api.version>2.0.0.Final</javax.validation.api.version>
+        <jacoco.version>0.8.12</jacoco.version>
+        <lombok.version>1.18.32</lombok.version>
         <javax.annotation-api.version>1.3.2</javax.annotation-api.version>
-        <io.swagger.version>1.5.20</io.swagger.version>
+        <io.swagger.version>2.2.22</io.swagger.version>
         <graalvm.version>23.1.2</graalvm.version>
         <chrisvest.stormpot.version>3.1</chrisvest.stormpot.version>
         <guava-retrying.version>2.0.0</guava-retrying.version>
         <commons.collections.version>4.4</commons.collections.version>
-        <commons-codec.version>1.14</commons-codec.version>
-        <commons-lang3.version>3.11</commons-lang3.version>
-        <commons-io.version>2.11.0</commons-io.version>
+        <commons-codec.version>1.17.0</commons-codec.version>
+        <commons-lang3.version>3.14.0</commons-lang3.version>
+        <commons-io.version>2.16.1</commons-io.version>
         <commons-math3.version>3.6.1</commons-math3.version>
-        <jakarta.websocket.version>2.0.0</jakarta.websocket.version>
+        <jakarta.websocket.version>2.2.0</jakarta.websocket.version>
         <titanium-json-ld.version>1.3.1</titanium-json-ld.version>
         <jakarta.json-api.version>1.1.4</jakarta.json-api.version>
-        <jakarta.json.version>1.1.6</jakarta.json.version>
-        <slf4j.version>2.0.9</slf4j.version>
+        <jakarta.json.version>2.1.3</jakarta.json.version>
+        <slf4j.version>2.0.13</slf4j.version>
 
         <!-- XML <-> JSON conversion dependency versions -->
-        <jakarta.xml.bind.version>4.0.0</jakarta.xml.bind.version>
-        <eclipse-persistence.version>4.0.2</eclipse-persistence.version>
+        <jakarta.xml.bind.version>4.0.2</jakarta.xml.bind.version>
+        <eclipse-persistence.version>4.0.3</eclipse-persistence.version>
 
-        <elasticsearch-java-client.version>8.5.0</elasticsearch-java-client.version>
+        <elasticsearch-java-client.version>8.13.4</elasticsearch-java-client.version>
 
         <!-- test lib versions -->
         <junit4.version>4.13.2</junit4.version>
@@ -123,7 +121,7 @@
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <!--    When updating, need to keep the graalvm.version in sync.     -->
-        <quarkus.platform.version>3.8.3</quarkus.platform.version>
+        <quarkus.platform.version>3.8.4</quarkus.platform.version>
         <quarkus-extension-plugin.version>0.26.1</quarkus-extension-plugin.version>
         <jandex-maven-plugin.version>3.1.6</jandex-maven-plugin.version>
         <org.glassfish.tyrus.version>1.1</org.glassfish.tyrus.version>
@@ -139,8 +137,9 @@
         <jakarta.json-api.version>2.1.1</jakarta.json-api.version>
         <parsson.version>1.1.5</parsson.version>
         <testng.version>7.7.1</testng.version>
-        <quarkus-opensearch-java-client.version>1.6.3</quarkus-opensearch-java-client.version>
-        <org.eclipse.persistence.asm.version>9.6.0</org.eclipse.persistence.asm.version>
+        <quarkus-opensearch-java-client.version>1.6.5</quarkus-opensearch-java-client.version>
+        <org.eclipse.persistence.asm.version>9.7.0</org.eclipse.persistence.asm.version>
+        <quarkus.opentelmetry.kafka.client.version>1.32.0-alpha</quarkus.opentelmetry.kafka.client.version>
     </properties>
 
     <dependencyManagement>
@@ -323,7 +322,7 @@
                 <version>${org.json.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.swagger</groupId>
+                <groupId>io.swagger.core.v3</groupId>
                 <artifactId>swagger-annotations</artifactId>
                 <version>${io.swagger.version}</version>
             </dependency>
@@ -584,6 +583,16 @@
                 <artifactId>testng</artifactId>
                 <version>${testng.version}</version>
             </dependency>
+            <dependency>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-opentelemetry</artifactId>
+                <version>${quarkus.platform.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.opentelemetry.instrumentation</groupId>
+                <artifactId>opentelemetry-kafka-clients-2.6</artifactId>
+                <version>${quarkus.opentelmetry.kafka.client.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
@@ -680,41 +689,6 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>com.mycila</groupId>
-                <artifactId>license-maven-plugin</artifactId>
-                <version>4.2</version>
-                <configuration>
-                    <properties>
-                        <owner>benelog GmbH &amp; Co. KG</owner>
-                        <email>sven.boeckelmann@benelog.com</email>
-                    </properties>
-                    <licenseSets>
-                        <licenseSet>
-                            <inlineHeader><![CDATA[
-    Copyright 2022-2023 benelog GmbH & Co. KG
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-]]></inlineHeader>
-                            <excludes>
-                                <exclude>**/README</exclude>
-                                <exclude>src/test/resources/**</exclude>
-                                <exclude>src/main/resources/**</exclude>
-                            </excludes>
-                        </licenseSet>
-                    </licenseSets>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>io.smallrye</groupId>
                 <artifactId>jandex-maven-plugin</artifactId>
                 <executions>
@@ -729,6 +703,87 @@
         </plugins>
     </build>
     <profiles>
+        <profile>
+            <id>apache-license</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.mycila</groupId>
+                        <artifactId>license-maven-plugin</artifactId>
+                        <version>4.2</version>
+                        <configuration>
+                            <properties>
+                                <owner>benelog GmbH &amp; Co. KG</owner>
+                                <email>sven.boeckelmann@benelog.com</email>
+                            </properties>
+                            <licenseSets>
+                                <licenseSet>
+                                    <inlineHeader><![CDATA[
+    Copyright 2022-2023 benelog GmbH & Co. KG
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+]]></inlineHeader>
+                                    <excludes>
+                                        <exclude>**/README</exclude>
+                                        <exclude>src/test/resources/**</exclude>
+                                        <exclude>src/main/resources/**</exclude>
+                                    </excludes>
+                                </licenseSet>
+                            </licenseSets>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>benelog-license</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.mycila</groupId>
+                        <artifactId>license-maven-plugin</artifactId>
+                        <version>4.5</version>
+                        <configuration>
+                            <properties>
+                                <owner>benelog GmbH &amp; Co. KG</owner>
+                                <email>sven.boeckelmann@benelog.com</email>
+                            </properties>
+                            <licenseSets>
+                                <licenseSet>
+                                    <inlineHeader><![CDATA[
+Copyright (c) 2022-2024 benelog GmbH & Co. KG
+All rights reserved.
+
+Unauthorized copying, modification, distribution,
+or use of this work, via any medium, is strictly prohibited.
+
+benelog GmbH & Co. KG reserves all rights not expressly granted herein,
+including the right to sell licenses for using this work.
+
+]]></inlineHeader>
+                                    <excludes>
+                                        <exclude>**/README</exclude>
+                                        <exclude>src/test/resources/**</exclude>
+                                        <exclude>src/main/resources/**</exclude>
+                                    </excludes>
+                                </licenseSet>
+                            </licenseSets>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
         <profile>
             <id>openepcis-ossrh</id>
             <build>
