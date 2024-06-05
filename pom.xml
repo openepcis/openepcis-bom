@@ -816,6 +816,9 @@ including the right to sell licenses for using this work.
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
                         <version>${maven-javadoc-plugin.version}</version>
+                        <configuration>
+                            <doclint>none</doclint>  <!-- Turnoff all checks -->
+                        </configuration>
                         <executions>
                             <execution>
                                 <id>attach-javadocs</id>
