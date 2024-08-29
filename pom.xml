@@ -840,11 +840,8 @@ including the right to sell licenses for using this work.
                                     <goal>sign</goal>
                                 </goals>
                                 <configuration>
-                                    <useAgent>true</useAgent>
-                                    <passphrase>${env.MAVEN_GPG_PASSPHRASE}</passphrase>
                                     <keyname>${gpg.keyname}</keyname>
                                     <gpgArguments>
-                                        <arg>--batch</arg>
                                         <arg>--pinentry-mode</arg>
                                         <arg>loopback</arg>
                                     </gpgArguments>
