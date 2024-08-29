@@ -140,7 +140,7 @@
         <quarkus-opensearch-java-client.version>1.6.11</quarkus-opensearch-java-client.version>
         <org.eclipse.persistence.asm.version>9.7.0</org.eclipse.persistence.asm.version>
         <quarkus.opentelmetry.kafka.client.version>1.32.0-alpha</quarkus.opentelmetry.kafka.client.version>
-        <quarkus.rest.high.level.client.version>2.15.0</quarkus.rest.high.level.client.version>
+        <quarkus.rest.high.level.client.version>1.10.0</quarkus.rest.high.level.client.version>
     </properties>
 
     <dependencyManagement>
@@ -595,8 +595,8 @@
                 <version>${quarkus.opentelmetry.kafka.client.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.opensearch.client</groupId>
-                <artifactId>opensearch-rest-high-level-client</artifactId>
+                <groupId>io.quarkiverse.opensearch</groupId>
+                <artifactId>quarkus-opensearch-rest-high-level-client</artifactId>
                 <version>${quarkus.rest.high.level.client.version}</version>
             </dependency>
         </dependencies>
