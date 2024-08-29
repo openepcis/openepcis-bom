@@ -39,4 +39,5 @@ jobs:
           --no-transfer-progress \
           --batch-mode \
           -Pci-build -Popenepcis-ossrh \
+          -Dgpg.passphrase=${{ secrets.OSSRH_GPG_SECRET_KEY }} \
           clean deploy
