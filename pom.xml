@@ -137,7 +137,7 @@
         <jakarta.json-api.version>2.1.1</jakarta.json-api.version>
         <parsson.version>1.1.5</parsson.version>
         <testng.version>7.7.1</testng.version>
-        <quarkus-opensearch-java-client.version>1.6.11</quarkus-opensearch-java-client.version>
+        <quarkus-opensearch.version>1.6.12</quarkus-opensearch.version>
         <org.eclipse.persistence.asm.version>9.7.0</org.eclipse.persistence.asm.version>
         <quarkus.opentelmetry.kafka.client.version>1.32.0-alpha</quarkus.opentelmetry.kafka.client.version>
     </properties>
@@ -474,7 +474,7 @@
             <dependency>
                 <groupId>io.quarkiverse.opensearch</groupId>
                 <artifactId>quarkus-opensearch-java-client</artifactId>
-                <version>${quarkus-opensearch-java-client.version}</version>
+                <version>${quarkus-opensearch.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.quarkus.platform</groupId>
@@ -592,6 +592,11 @@
                 <groupId>io.opentelemetry.instrumentation</groupId>
                 <artifactId>opentelemetry-kafka-clients-2.6</artifactId>
                 <version>${quarkus.opentelmetry.kafka.client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkiverse.opensearch</groupId>
+                <artifactId>quarkus-opensearch-rest-high-level-client</artifactId>
+                <version>${quarkus-opensearch.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
