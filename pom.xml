@@ -336,7 +336,6 @@
                 <groupId>org.graalvm.polyglot</groupId>
                 <artifactId>js-community</artifactId>
                 <version>${graalvm.version}</version>
-                <scope>runtime</scope>
                 <type>pom</type>
             </dependency>
             <dependency>
