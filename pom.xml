@@ -335,8 +335,8 @@
             <dependency>
                 <groupId>org.graalvm.polyglot</groupId>
                 <artifactId>js-community</artifactId>
-                <version>${graalvm.version}</version>
                 <type>pom</type>
+                <version>${graalvm.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.graalvm.polyglot</groupId>
