@@ -23,7 +23,7 @@
 
     <groupId>io.openepcis</groupId>
     <artifactId>openepcis-bom</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>999-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>openepcis-bom</name>
@@ -63,7 +63,7 @@
         <nexus-staging-maven-plugin.version>1.6.14</nexus-staging-maven-plugin.version>
         <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>17</java.version>
+        <java.version>21</java.version>
         <maven.compiler.release>${java.version}</maven.compiler.release>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.source>${java.version}</maven.compiler.source>
@@ -121,23 +121,19 @@
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <!--    When updating, need to keep the graalvm.version in sync.     -->
-        <quarkus.platform.version>3.8.5</quarkus.platform.version>
+        <quarkus.platform.version>3.15.2</quarkus.platform.version>
         <quarkus-extension-plugin.version>0.26.1</quarkus-extension-plugin.version>
         <jandex-maven-plugin.version>3.1.6</jandex-maven-plugin.version>
-        <org.glassfish.tyrus.version>1.1</org.glassfish.tyrus.version>
         <jakarta.activation-api.version>2.1.2</jakarta.activation-api.version>
-        <org.glassfish.jaxb-core.version>4.0.1</org.glassfish.jaxb-core.version>
-        <org.glassfish.jaxb-xjc.version>4.0.1</org.glassfish.jaxb-xjc.version>
-        <mbknor-jackson-jsonschema_2.13>1.0.39</mbknor-jackson-jsonschema_2.13>
-        <rest-assured.version>5.2.0</rest-assured.version>
-        <quarkus-amazon-services.version>2.12.2</quarkus-amazon-services.version>
-        <joda-time.version>2.10.8</joda-time.version>
+        <rest-assured.version>5.5.0</rest-assured.version>
+        <quarkus-amazon-services.version>2.18.1</quarkus-amazon-services.version>
+        <joda-time.version>2.13.0</joda-time.version>
         <reactor-core.version>3.4.14</reactor-core.version>
-        <jobrunr.version>7.2.2</jobrunr.version>
+        <jobrunr.version>7.3.1</jobrunr.version>
         <jakarta.json-api.version>2.1.1</jakarta.json-api.version>
         <parsson.version>1.1.5</parsson.version>
         <testng.version>7.7.1</testng.version>
-        <quarkus-opensearch.version>1.6.13</quarkus-opensearch.version>
+        <quarkus-opensearch.version>1.12.0</quarkus-opensearch.version>
         <org.eclipse.persistence.asm.version>9.7.0</org.eclipse.persistence.asm.version>
         <quarkus.opentelmetry.kafka.client.version>1.32.0-alpha</quarkus.opentelmetry.kafka.client.version>
         <quarkus-bucket4j.version>1.0.4</quarkus-bucket4j.version>
@@ -395,22 +391,6 @@
                 <version>${commons.collections.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
-                <artifactId>jaxb-core</artifactId>
-                <version>${org.glassfish.jaxb-core.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
-                <artifactId>jaxb-xjc</artifactId>
-                <version>${org.glassfish.jaxb-xjc.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
-                <artifactId>jaxb-runtime</artifactId>
-                <version>${org.glassfish.jaxb-core.version}</version>
-            </dependency>
-
-            <dependency>
                 <groupId>com.kjetland</groupId>
                 <artifactId>mbknor-jackson-jsonschema_2.13</artifactId>
                 <version>${mbknor-jackson-jsonschema_2.13}</version>
@@ -641,13 +621,6 @@
                     <artifactId>maven-checkstyle-plugin</artifactId>
                     <!-- Lock down plugin version for build reproducibility -->
                     <version>${maven-checkstyle-plugin.version}</version>
-                    <dependencies>
-                        <dependency>
-                            <groupId>com.puppycrawl.tools</groupId>
-                            <artifactId>checkstyle</artifactId>
-                            <version>${checkstyle.version}</version>
-                        </dependency>
-                    </dependencies>
                     <configuration>
                         <consoleOutput>true</consoleOutput>
                         <configLocation>src/main/resources/checkstyle.xml</configLocation>
