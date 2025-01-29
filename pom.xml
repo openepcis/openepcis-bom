@@ -137,6 +137,7 @@
         <org.eclipse.persistence.asm.version>9.7.0</org.eclipse.persistence.asm.version>
         <quarkus.opentelmetry.kafka.client.version>1.32.0-alpha</quarkus.opentelmetry.kafka.client.version>
         <quarkus-bucket4j.version>1.0.4</quarkus-bucket4j.version>
+        <quarkus-azure-storage-blob.version>1.1.1</quarkus-azure-storage-blob.version>
     </properties>
 
     <dependencyManagement>
@@ -582,6 +583,11 @@
                 <groupId>io.quarkiverse.bucket4j</groupId>
                 <artifactId>quarkus-bucket4j</artifactId>
                 <version>${quarkus-bucket4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkiverse.azureservices</groupId>
+                <artifactId>quarkus-azure-storage-blob</artifactId>
+                <version>${quarkus-azure-storage-blob.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
