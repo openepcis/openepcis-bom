@@ -589,6 +589,11 @@
                 <artifactId>quarkus-azure-storage-blob</artifactId>
                 <version>${quarkus-azure-storage-blob.version}</version>
             </dependency>
+            <dependency>
+                <groupId>io.quarkiverse.azureservices</groupId>
+                <artifactId>quarkus-azure-storage-blob-deployment</artifactId>
+                <version>${quarkus-azure-storage-blob.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
