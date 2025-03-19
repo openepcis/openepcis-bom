@@ -134,7 +134,7 @@
         <parsson.version>1.1.7</parsson.version>
         <testng.version>7.11.0</testng.version>
         <quarkus-opensearch.version>1.16.2</quarkus-opensearch.version>
-        <org.eclipse.persistence.asm.version>9.7.0</org.eclipse.persistence.asm.version>
+        <org.eclipse.persistence.asm.version>9.7.1</org.eclipse.persistence.asm.version>
         <quarkus.opentelmetry.kafka.client.version>2.14.0-alpha</quarkus.opentelmetry.kafka.client.version>
         <quarkus-bucket4j.version>1.0.4</quarkus-bucket4j.version>
         <quarkus-azure-storage-blob.version>1.1.2</quarkus-azure-storage-blob.version>
