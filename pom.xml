@@ -60,16 +60,16 @@
     </repositories>
 
     <properties>
-        <nexus-staging-maven-plugin.version>1.6.14</nexus-staging-maven-plugin.version>
-        <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
+        <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
+        <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>21</java.version>
         <maven.compiler.release>${java.version}</maven.compiler.release>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven-deploy-plugin.version>3.1.2</maven-deploy-plugin.version>
-        <git-code-format-maven-plugin.version>4.2</git-code-format-maven-plugin.version>
-        <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
+        <maven-deploy-plugin.version>4.0.0-beta-2</maven-deploy-plugin.version>
+        <git-code-format-maven-plugin.version>5.3</git-code-format-maven-plugin.version>
+        <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
         <maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <maven-gpg-plugin.version>3.2.4</maven-gpg-plugin.version>
@@ -77,19 +77,19 @@
         <gpg.keyname>759F1D2BF6B65D135FAD2716A355F274126C92B8</gpg.keyname>
 
         <!-- 1.3.x is causing issues with quarkus native builds -->
-        <com.networknt.json.schema.version>1.2.0</com.networknt.json.schema.version>
+        <com.networknt.json.schema.version>1.5.6</com.networknt.json.schema.version>
 
         <jacoco.version>0.8.12</jacoco.version>
-        <lombok.version>1.18.32</lombok.version>
+        <lombok.version>1.18.36</lombok.version>
         <javax.annotation-api.version>1.3.2</javax.annotation-api.version>
-        <io.swagger.version>2.2.22</io.swagger.version>
+        <io.swagger.version>2.2.29</io.swagger.version>
         <graalvm.version>23.1.2</graalvm.version>
-        <chrisvest.stormpot.version>3.1</chrisvest.stormpot.version>
+        <chrisvest.stormpot.version>4.1</chrisvest.stormpot.version>
         <guava-retrying.version>2.0.0</guava-retrying.version>
-        <commons.collections.version>4.4</commons.collections.version>
-        <commons-codec.version>1.17.0</commons-codec.version>
-        <commons-lang3.version>3.14.0</commons-lang3.version>
-        <commons-io.version>2.16.1</commons-io.version>
+        <commons.collections.version>4.5.0-M3</commons.collections.version>
+        <commons-codec.version>1.18.0</commons-codec.version>
+        <commons-lang3.version>3.17.0</commons-lang3.version>
+        <commons-io.version>2.18.0</commons-io.version>
         <commons-math3.version>3.6.1</commons-math3.version>
         <jakarta.websocket.version>2.2.0</jakarta.websocket.version>
         <titanium-json-ld.version>1.4.1</titanium-json-ld.version>
@@ -99,9 +99,9 @@
 
         <!-- XML <-> JSON conversion dependency versions -->
         <jakarta.xml.bind.version>4.0.2</jakarta.xml.bind.version>
-        <eclipse-persistence.version>4.0.3</eclipse-persistence.version>
+        <eclipse-persistence.version>5.0.0-B07</eclipse-persistence.version>
 
-        <elasticsearch-java-client.version>8.13.4</elasticsearch-java-client.version>
+        <elasticsearch-java-client.version>9.0.0-beta1</elasticsearch-java-client.version>
 
         <!-- test lib versions -->
         <junit4.version>4.13.2</junit4.version>
@@ -109,35 +109,35 @@
         <junit-platform-runner.version>1.6.2</junit-platform-runner.version>
         <mockito-junit-jupiter.version>3.3.3</mockito-junit-jupiter.version>
         <hamcrest-junit.version>2.0.0.0</hamcrest-junit.version>
-        <powermock-api-mockito2.version>2.0.7</powermock-api-mockito2.version>
-        <io.jsonwebtoken.version>0.11.2</io.jsonwebtoken.version>
+        <powermock-api-mockito2.version>2.0.9</powermock-api-mockito2.version>
+        <io.jsonwebtoken.version>0.12.6</io.jsonwebtoken.version>
         <surefire-plugin.version>3.1.2</surefire-plugin.version>
         <failsafe-plugin.version>3.1.2</failsafe-plugin.version>
         <barcode4j.version>2.1</barcode4j.version>
         <json-schema-validator.version>5.3.2</json-schema-validator.version>
-        <org.json.version>20190722</org.json.version>
-        <handy-uri-templates.version>2.1.7</handy-uri-templates.version>
-        <jetcd-core.version>0.7.5</jetcd-core.version>
+        <org.json.version>20250107</org.json.version>
+        <handy-uri-templates.version>2.1.8</handy-uri-templates.version>
+        <jetcd-core.version>0.8.5</jetcd-core.version>
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <!--    When updating, need to keep the graalvm.version in sync.     -->
-        <quarkus.platform.version>3.15.3.1</quarkus.platform.version>
+        <quarkus.platform.version>3.19.3</quarkus.platform.version>
         <quarkus-extension-plugin.version>0.26.1</quarkus-extension-plugin.version>
-        <jandex-maven-plugin.version>3.1.6</jandex-maven-plugin.version>
-        <jakarta.activation-api.version>2.1.2</jakarta.activation-api.version>
-        <rest-assured.version>5.5.0</rest-assured.version>
-        <quarkus-amazon-services.version>2.18.1</quarkus-amazon-services.version>
+        <jandex-maven-plugin.version>3.2.7</jandex-maven-plugin.version>
+        <jakarta.activation-api.version>2.1.3</jakarta.activation-api.version>
+        <rest-assured.version>5.5.1</rest-assured.version>
+        <quarkus-amazon-services.version>3.3.1</quarkus-amazon-services.version>
         <joda-time.version>2.13.0</joda-time.version>
-        <reactor-core.version>3.4.14</reactor-core.version>
-        <jobrunr.version>7.3.1</jobrunr.version>
-        <jakarta.json-api.version>2.1.1</jakarta.json-api.version>
-        <parsson.version>1.1.5</parsson.version>
-        <testng.version>7.7.1</testng.version>
-        <quarkus-opensearch.version>1.12.2</quarkus-opensearch.version>
+        <reactor-core.version>3.8.0-M1</reactor-core.version>
+        <jobrunr.version>7.4.1</jobrunr.version>
+        <jakarta.json-api.version>2.1.3</jakarta.json-api.version>
+        <parsson.version>1.1.7</parsson.version>
+        <testng.version>7.11.0</testng.version>
+        <quarkus-opensearch.version>1.16.2</quarkus-opensearch.version>
         <org.eclipse.persistence.asm.version>9.7.0</org.eclipse.persistence.asm.version>
-        <quarkus.opentelmetry.kafka.client.version>1.32.0-alpha</quarkus.opentelmetry.kafka.client.version>
+        <quarkus.opentelmetry.kafka.client.version>2.14.0-alpha</quarkus.opentelmetry.kafka.client.version>
         <quarkus-bucket4j.version>1.0.4</quarkus-bucket4j.version>
-        <quarkus-azure-storage-blob.version>1.1.1</quarkus-azure-storage-blob.version>
+        <quarkus-azure-storage-blob.version>1.1.2</quarkus-azure-storage-blob.version>
     </properties>
 
     <dependencyManagement>
@@ -439,7 +439,7 @@
             </dependency>
             <dependency>
                 <groupId>io.quarkus</groupId>
-                <artifactId>quarkus-resteasy-reactive</artifactId>
+                <artifactId>quarkus-rest</artifactId>
                 <version>${quarkus.platform.version}</version>
             </dependency>
             <dependency>
@@ -459,7 +459,7 @@
             </dependency>
             <dependency>
                 <groupId>io.quarkus.platform</groupId>
-                <artifactId>quarkus-smallrye-reactive-messaging-kafka</artifactId>
+                <artifactId>quarkus-messaging-kafka</artifactId>
                 <version>${quarkus.platform.version}</version>
             </dependency>
             <dependency>
@@ -697,6 +697,14 @@
                         </goals>
                     </execution>
                 </executions>
+                <dependencies>
+                    <!-- Enable https://github.com/google/google-java-format -->
+                    <dependency>
+                        <groupId>com.cosium.code</groupId>
+                        <artifactId>google-java-format</artifactId>
+                        <version>${git-code-format-maven-plugin.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
             <plugin>
                 <groupId>io.smallrye</groupId>
@@ -709,6 +717,11 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.8.1</version>
             </plugin>
         </plugins>
     </build>
