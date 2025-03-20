@@ -742,7 +742,7 @@
                             <licenseSets>
                                 <licenseSet>
                                     <inlineHeader><![CDATA[
-    Copyright 2022-2024 benelog GmbH & Co. KG
+    Copyright 2022-2025 benelog GmbH & Co. KG
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -784,7 +784,7 @@
                             <licenseSets>
                                 <licenseSet>
                                     <inlineHeader><![CDATA[
-Copyright (c) 2022-2024 benelog GmbH & Co. KG
+Copyright (c) 2022-2025 benelog GmbH & Co. KG
 All rights reserved.
 
 Unauthorized copying, modification, distribution,
