@@ -99,7 +99,8 @@
 
         <!-- XML <-> JSON conversion dependency versions -->
         <jakarta.xml.bind.version>4.0.2</jakarta.xml.bind.version>
-        <eclipse-persistence.version>5.0.0-B07</eclipse-persistence.version>
+        <eclipse-persistence.version>4.0.5</eclipse-persistence.version>
+        <google.zxing.version>3.5.3</google.zxing.version> <!-- QR Code Generation -->
 
         <elasticsearch-java-client.version>9.0.0-beta1</elasticsearch-java-client.version>
 
@@ -395,6 +396,17 @@
                 <groupId>com.kjetland</groupId>
                 <artifactId>mbknor-jackson-jsonschema_2.13</artifactId>
                 <version>${mbknor-jackson-jsonschema_2.13}</version>
+            </dependency>
+            <!-- ZXing core + javase for QR code generation and processing -->
+            <dependency>
+                <groupId>com.google.zxing</groupId>
+                <artifactId>core</artifactId>
+                <version>${google.zxing.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.zxing</groupId>
+                <artifactId>javase</artifactId>
+                <version>${google.zxing.version}</version>
             </dependency>
             <dependency>
                 <groupId>${quarkus.platform.group-id}</groupId>
