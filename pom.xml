@@ -909,7 +909,7 @@ including the right to sell licenses for using this work.
             <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
             <snapshots>
                 <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
+                <updatePolicy>daily</updatePolicy>
             </snapshots>
         </repository>
     </distributionManagement>
