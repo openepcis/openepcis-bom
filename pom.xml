@@ -101,6 +101,7 @@
         <jakarta.xml.bind.version>4.0.2</jakarta.xml.bind.version>
         <eclipse-persistence.version>4.0.5</eclipse-persistence.version>
         <google.zxing.version>3.5.3</google.zxing.version> <!-- QR Code Generation -->
+        <jinjava.version>2.7.2</jinjava.version> <!-- java json engine -->
 
         <elasticsearch-java-client.version>9.0.0-beta1</elasticsearch-java-client.version>
 
@@ -407,6 +408,11 @@
                 <groupId>com.google.zxing</groupId>
                 <artifactId>javase</artifactId>
                 <version>${google.zxing.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hubspot.jinjava</groupId>
+                <artifactId>jinjava</artifactId>
+                <version>${jinjava.version}</version>
             </dependency>
             <dependency>
                 <groupId>${quarkus.platform.group-id}</groupId>
