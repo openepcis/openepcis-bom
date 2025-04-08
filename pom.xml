@@ -686,44 +686,7 @@
                 <artifactId>maven-dependency-plugin</artifactId>
                 <version>3.4.0</version>
             </plugin>
-            <plugin>
-                <groupId>com.cosium.code</groupId>
-                <artifactId>git-code-format-maven-plugin</artifactId>
-                <version>${git-code-format-maven-plugin.version}</version>
-                <executions>
-                    <!-- format code when processing resources -->
-                    <execution>
-                        <id>format</id>
-                        <goals>
-                            <goal>format-code</goal>
-                        </goals>
-                        <phase>process-resources</phase>
-                    </execution>
-                    <!-- On commit, format the modified java files -->
-                    <execution>
-                        <id>install-formatter-hook</id>
-                        <goals>
-                            <goal>install-hooks</goal>
-                        </goals>
-                    </execution>
-                    <!-- On Maven verify phase, fail if any file
-                    (including unmodified) is badly formatted -->
-                    <execution>
-                        <id>validate-code-format</id>
-                        <goals>
-                            <goal>validate-code-format</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <dependencies>
-                    <!-- Enable https://github.com/google/google-java-format -->
-                    <dependency>
-                        <groupId>com.cosium.code</groupId>
-                        <artifactId>google-java-format</artifactId>
-                        <version>${git-code-format-maven-plugin.version}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
+
             <plugin>
                 <groupId>io.smallrye</groupId>
                 <artifactId>jandex-maven-plugin</artifactId>
