@@ -99,7 +99,7 @@
 
         <!-- XML <-> JSON conversion dependency versions -->
         <jakarta.xml.bind.version>4.0.2</jakarta.xml.bind.version>
-        <eclipse-persistence.version>4.0.5</eclipse-persistence.version>
+        <eclipse-persistence.version>4.0.6</eclipse-persistence.version>
         <google.zxing.version>3.5.3</google.zxing.version> <!-- QR Code Generation -->
         <jinjava.version>2.7.2</jinjava.version> <!-- java json engine -->
 
