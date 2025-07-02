@@ -55,7 +55,7 @@
     <repositories>
         <repository>
             <id>sonatype-staging</id>
-            <url>https://ossrh-staging-api.central.sonatype.com/content/repositories/snapshots</url>
+            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
         </repository>
     </repositories>
 
@@ -898,7 +898,7 @@ including the right to sell licenses for using this work.
         </snapshotRepository>
         <repository>
             <id>openepcis-ossrh</id>
-            <url>https://ossrh-staging-api.central.sonatype.com/service/local/staging/deploy/maven2/</url>
+            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
             <snapshots>
                 <enabled>true</enabled>
                 <updatePolicy>daily</updatePolicy>
