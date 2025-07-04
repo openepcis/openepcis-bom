@@ -810,7 +810,7 @@ including the right to sell licenses for using this work.
                         <extensions>true</extensions>
                         <configuration>
                             <serverId>openepcis-ossrh</serverId>
-                            <nexusUrl>https://repo1.maven.org/maven2/</nexusUrl>
+                            <nexusUrl>https://ossrh-staging-api.central.sonatype.com/</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
                     </plugin>
@@ -894,11 +894,11 @@ including the right to sell licenses for using this work.
     <distributionManagement>
         <snapshotRepository>
             <id>openepcis-ossrh</id>
-            <url>https://central.sonatype.com</url>
+            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
         </snapshotRepository>
         <repository>
             <id>openepcis-ossrh</id>
-            <url>https://central.sonatype.com</url>
+            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
             <snapshots>
                 <enabled>true</enabled>
                 <updatePolicy>daily</updatePolicy>
