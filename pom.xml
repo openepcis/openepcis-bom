@@ -142,6 +142,7 @@
         <quarkus.opentelmetry.kafka.client.version>2.14.0-alpha</quarkus.opentelmetry.kafka.client.version>
         <quarkus-bucket4j.version>1.0.4</quarkus-bucket4j.version>
         <quarkus-azure-storage-blob.version>1.1.2</quarkus-azure-storage-blob.version>
+        <javax.validation.api.version>2.0.1.Final</javax.validation.api.version>
     </properties>
 
     <dependencyManagement>
