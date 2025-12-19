@@ -125,23 +125,23 @@
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <!--    When updating, need to keep the graalvm.version in sync.     -->
-        <quarkus.platform.version>3.20.3</quarkus.platform.version>
+        <quarkus.platform.version>3.27.1</quarkus.platform.version>
         <quarkus-extension-plugin.version>0.26.1</quarkus-extension-plugin.version>
         <jandex-maven-plugin.version>3.2.7</jandex-maven-plugin.version>
         <jakarta.activation-api.version>2.1.3</jakarta.activation-api.version>
         <rest-assured.version>5.5.1</rest-assured.version>
-        <quarkus-amazon-services.version>3.3.3</quarkus-amazon-services.version>
+        <quarkus-amazon-services.version>3.9.1</quarkus-amazon-services.version>
         <joda-time.version>2.13.0</joda-time.version>
         <reactor-core.version>3.8.0-M1</reactor-core.version>
         <jobrunr.version>7.4.1</jobrunr.version>
         <jakarta.json-api.version>2.1.3</jakarta.json-api.version>
         <parsson.version>1.1.7</parsson.version>
         <testng.version>7.11.0</testng.version>
-        <quarkus-opensearch.version>1.17.0</quarkus-opensearch.version>
+        <quarkus-opensearch.version>2.1.0</quarkus-opensearch.version>
         <org.eclipse.persistence.asm.version>9.7.1</org.eclipse.persistence.asm.version>
         <quarkus.opentelmetry.kafka.client.version>2.14.0-alpha</quarkus.opentelmetry.kafka.client.version>
-        <quarkus-bucket4j.version>1.0.4</quarkus-bucket4j.version>
-        <quarkus-azure-storage-blob.version>1.1.2</quarkus-azure-storage-blob.version>
+        <quarkus-bucket4j.version>1.0.7</quarkus-bucket4j.version>
+        <quarkus-azure-storage-blob.version>1.2.1</quarkus-azure-storage-blob.version>
         <javax.validation.api.version>2.0.1.Final</javax.validation.api.version>
     </properties>
 
