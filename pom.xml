@@ -57,6 +57,16 @@
             <id>sonatype-staging</id>
             <url>https://central.sonatype.com/repository/maven-snapshots/</url>
         </repository>
+        <repository>
+            <id>gitlab-maven</id>
+            <url>${env.CI_API_V4_URL}/projects/${env.CI_PROJECT_ID}/packages/maven</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
     </repositories>
 
     <properties>
@@ -481,6 +491,11 @@
                 <version>${quarkus-opensearch.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.quarkiverse.opensearch</groupId>
+                <artifactId>quarkus-opensearch-transport-apache</artifactId>
+                <version>${quarkus-opensearch.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.quarkus.platform</groupId>
                 <artifactId>quarkus-messaging-kafka</artifactId>
                 <version>${quarkus.platform.version}</version>
@@ -894,16 +909,12 @@ including the right to sell licenses for using this work.
     </profiles>
     <distributionManagement>
         <snapshotRepository>
-            <id>openepcis-ossrh</id>
-            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+            <id>gitlab-maven</id>
+            <url>${env.CI_API_V4_URL}/projects/${env.CI_PROJECT_ID}/packages/maven</url>
         </snapshotRepository>
         <repository>
-            <id>openepcis-ossrh</id>
-            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </snapshots>
+            <id>gitlab-maven</id>
+            <url>${env.CI_API_V4_URL}/projects/${env.CI_PROJECT_ID}/packages/maven</url>
         </repository>
     </distributionManagement>
 </project>
