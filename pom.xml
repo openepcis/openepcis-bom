@@ -107,10 +107,7 @@
 
         <!-- test lib versions -->
         <junit4.version>4.13.2</junit4.version>
-        <!--
         <junit.version>5.9.2</junit.version>
-        <junit-platform-runner.version>1.6.2</junit-platform-runner.version>
-        -->
         <mockito-junit-jupiter.version>3.3.3</mockito-junit-jupiter.version>
         <hamcrest-junit.version>2.0.0.0</hamcrest-junit.version>
         <powermock-api-mockito2.version>2.0.9</powermock-api-mockito2.version>
@@ -238,7 +235,7 @@
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter</artifactId>
-                <version>${junit.version}</version>
+                <version>5.11.4</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
