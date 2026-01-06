@@ -137,7 +137,7 @@
         <jakarta.json-api.version>2.1.3</jakarta.json-api.version>
         <parsson.version>1.1.7</parsson.version>
         <testng.version>7.11.0</testng.version>
-        <quarkus-opensearch.version>2.1.0</quarkus-opensearch.version>
+        <quarkus-opensearch.version>3.1.0</quarkus-opensearch.version>
         <org.eclipse.persistence.asm.version>9.7.1</org.eclipse.persistence.asm.version>
         <quarkus.opentelmetry.kafka.client.version>2.14.0-alpha</quarkus.opentelmetry.kafka.client.version>
         <quarkus-bucket4j.version>1.0.7</quarkus-bucket4j.version>
@@ -533,11 +533,6 @@
                 <version>${quarkus.platform.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.quarkus</groupId>
-                <artifactId>quarkus-elasticsearch-rest-high-level-client</artifactId>
-                <version>${quarkus.platform.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>co.elastic.clients</groupId>
                 <artifactId>elasticsearch-java</artifactId>
                 <version>${elasticsearch-java-client.version}</version>
@@ -619,11 +614,6 @@
                 <groupId>io.opentelemetry.instrumentation</groupId>
                 <artifactId>opentelemetry-kafka-clients-2.6</artifactId>
                 <version>${quarkus.opentelmetry.kafka.client.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.quarkiverse.opensearch</groupId>
-                <artifactId>quarkus-opensearch-rest-high-level-client</artifactId>
-                <version>${quarkus-opensearch.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.quarkiverse.bucket4j</groupId>
