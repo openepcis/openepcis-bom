@@ -509,11 +509,6 @@
                 <version>${quarkus-opensearch.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.quarkiverse.opensearch</groupId>
-                <artifactId>quarkus-opensearch-rest-client</artifactId>
-                <version>${quarkus-opensearch.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>io.quarkus.platform</groupId>
                 <artifactId>quarkus-messaging-kafka</artifactId>
                 <version>${quarkus.platform.version}</version>
