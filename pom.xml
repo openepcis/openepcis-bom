@@ -134,7 +134,7 @@
         <jakarta.json-api.version>2.1.3</jakarta.json-api.version>
         <parsson.version>1.1.7</parsson.version>
         <testng.version>7.11.0</testng.version>
-        <quarkus-opensearch.version>3.1.1</quarkus-opensearch.version>
+        <quarkus-opensearch.version>3.1.2</quarkus-opensearch.version>
         <org.eclipse.persistence.asm.version>9.7.1</org.eclipse.persistence.asm.version>
         <quarkus.opentelmetry.kafka.client.version>2.14.0-alpha</quarkus.opentelmetry.kafka.client.version>
         <quarkus-bucket4j.version>1.0.7</quarkus-bucket4j.version>
