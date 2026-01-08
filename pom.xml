@@ -53,6 +53,17 @@
     </scm>
 
     <repositories>
+        <!-- GitLab Maven Package Registry (project 79) -->
+        <repository>
+            <id>gitlab-maven</id>
+            <url>https://code.company-group.com/api/v4/projects/79/packages/maven</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
         <repository>
             <id>sonatype-staging</id>
             <url>https://central.sonatype.com/repository/maven-snapshots/</url>
@@ -915,16 +926,12 @@ including the right to sell licenses for using this work.
     </profiles>
     <distributionManagement>
         <snapshotRepository>
-            <id>openepcis-ossrh</id>
-            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+            <id>gitlab-maven</id>
+            <url>https://code.company-group.com/api/v4/projects/79/packages/maven</url>
         </snapshotRepository>
         <repository>
-            <id>openepcis-ossrh</id>
-            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </snapshots>
+            <id>gitlab-maven</id>
+            <url>https://code.company-group.com/api/v4/projects/79/packages/maven</url>
         </repository>
     </distributionManagement>
 </project>
