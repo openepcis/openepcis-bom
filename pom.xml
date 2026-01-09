@@ -684,6 +684,12 @@
                 <plugin>
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>${maven-deploy-plugin.version}</version>
+                    <configuration>
+                        <!-- Retry failed deployments (common with GitLab Maven) -->
+                        <retryFailedDeploymentCount>3</retryFailedDeploymentCount>
+                        <!-- Deploy each module immediately, don't batch at end -->
+                        <deployAtEnd>false</deployAtEnd>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.sonatype.plugins</groupId>
