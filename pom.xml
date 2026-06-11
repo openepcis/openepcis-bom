@@ -23,7 +23,7 @@
 
     <groupId>io.openepcis</groupId>
     <artifactId>openepcis-bom</artifactId>
-    <version>0.9.3</version>
+    <version>999-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>openepcis-bom</name>
