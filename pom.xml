@@ -133,7 +133,14 @@
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <!--    When updating, need to keep the graalvm.version in sync.     -->
-        <quarkus.platform.version>3.27.1</quarkus.platform.version>
+        <!--
+            Quarkus LTS. 3.27 reached end of support on 24 Sep 2026; 3.33 is the current
+            LTS, supported to Mar 2027. The upgrade also unpins quarkus-mcp-server, which
+            tracks the platform closely — 1.11.0+ requires 3.33 and fails on 3.27 with
+            NoSuchMethodError Gizmo.withDebugInfo(boolean), which is why openepcis-ai-mcp
+            is held at 1.9.0.
+        -->
+        <quarkus.platform.version>3.33.2.1</quarkus.platform.version>
         <!-- Pin patched Jackson 2.x to override the version inherited from quarkus-bom
              (security: Aikido issue 17824). Keep on the 2.x line; Quarkus is built on Jackson 2.x. -->
         <jackson.version>2.22.0</jackson.version>
