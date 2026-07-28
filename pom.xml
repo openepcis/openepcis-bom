@@ -151,7 +151,15 @@
         <quarkus-amazon-services.version>3.9.1</quarkus-amazon-services.version>
         <joda-time.version>2.13.0</joda-time.version>
         <reactor-core.version>3.8.0-M1</reactor-core.version>
-        <jobrunr.version>7.4.1</jobrunr.version>
+        <!--
+            Tracks the platform. JobRunr's Quarkus extension embeds build steps against a
+            specific Quarkus API: 7.4.1 fails on 3.33 with "Run time configuration
+            JobRunrRuntimeConfiguration can only be injected in a @Recorder constructor as a
+            RuntimeValue" from JobRunrExtensionProcessor, because newer Quarkus requires
+            recorder config to be wrapped. 8.7.1 is built against quarkus-core 3.33.2.
+            Raise this together with quarkus.platform.version, not independently.
+        -->
+        <jobrunr.version>8.7.1</jobrunr.version>
         <jakarta.json-api.version>2.1.3</jakarta.json-api.version>
         <parsson.version>1.1.7</parsson.version>
         <testng.version>7.11.0</testng.version>
