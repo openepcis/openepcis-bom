@@ -142,8 +142,10 @@
         -->
         <quarkus.platform.version>3.33.2.1</quarkus.platform.version>
         <!-- Pin patched Jackson 2.x to override the version inherited from quarkus-bom
-             (security: Aikido issue 17824). Keep on the 2.x line; Quarkus is built on Jackson 2.x. -->
-        <jackson.version>2.22.0</jackson.version>
+             (security: Aikido issues 17824, 37190929 — 2.22.1 completes the incomplete
+             GHSA-72hv-8253-57qq async-parser number-length fix). Keep on the 2.x line;
+             Quarkus is built on Jackson 2.x. -->
+        <jackson.version>2.22.1</jackson.version>
         <quarkus-extension-plugin.version>0.26.1</quarkus-extension-plugin.version>
         <jandex-maven-plugin.version>3.2.7</jandex-maven-plugin.version>
         <jakarta.activation-api.version>2.1.3</jakarta.activation-api.version>
