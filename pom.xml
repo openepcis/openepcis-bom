@@ -74,7 +74,7 @@
         <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
         <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>21</java.version>
+        <java.version>25</java.version>
         <maven.compiler.release>${java.version}</maven.compiler.release>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.source>${java.version}</maven.compiler.source>
@@ -90,11 +90,11 @@
         <!-- 1.3.x is causing issues with quarkus native builds -->
         <com.networknt.json.schema.version>1.5.6</com.networknt.json.schema.version>
 
-        <jacoco.version>0.8.12</jacoco.version>
+        <jacoco.version>0.8.15</jacoco.version>
         <lombok.version>1.18.42</lombok.version>
         <javax.annotation-api.version>1.3.2</javax.annotation-api.version>
         <io.swagger.version>2.2.29</io.swagger.version>
-        <graalvm.version>24.1.2</graalvm.version>
+        <graalvm.version>25.0.4</graalvm.version>
         <chrisvest.stormpot.version>4.1</chrisvest.stormpot.version>
         <guava-retrying.version>2.0.0</guava-retrying.version>
         <commons.collections.version>4.5.0-M3</commons.collections.version>
@@ -119,12 +119,12 @@
         <!-- test lib versions -->
         <junit4.version>4.13.2</junit4.version>
         <junit.version>5.9.2</junit.version>
-        <mockito-junit-jupiter.version>3.3.3</mockito-junit-jupiter.version>
         <hamcrest-junit.version>2.0.0.0</hamcrest-junit.version>
         <powermock-api-mockito2.version>2.0.9</powermock-api-mockito2.version>
         <io.jsonwebtoken.version>0.12.6</io.jsonwebtoken.version>
-        <surefire-plugin.version>3.1.2</surefire-plugin.version>
-        <failsafe-plugin.version>3.1.2</failsafe-plugin.version>
+        <!-- 3.5.x required for tests on Java 25 (older versions choke on class-file 69) -->
+        <surefire-plugin.version>3.5.6</surefire-plugin.version>
+        <failsafe-plugin.version>3.5.6</failsafe-plugin.version>
         <barcode4j.version>2.1</barcode4j.version>
         <json-schema-validator.version>5.3.2</json-schema-validator.version>
         <org.json.version>20250107</org.json.version>
@@ -140,14 +140,14 @@
             NoSuchMethodError Gizmo.withDebugInfo(boolean), which is why openepcis-ai-mcp
             is held at 1.9.0.
         -->
-        <quarkus.platform.version>3.33.2.1</quarkus.platform.version>
+        <quarkus.platform.version>3.33.3</quarkus.platform.version>
         <!-- Pin patched Jackson 2.x to override the version inherited from quarkus-bom
              (security: Aikido issues 17824, 37190929 — 2.22.1 completes the incomplete
              GHSA-72hv-8253-57qq async-parser number-length fix). Keep on the 2.x line;
              Quarkus is built on Jackson 2.x. -->
         <jackson.version>2.22.1</jackson.version>
         <quarkus-extension-plugin.version>0.26.1</quarkus-extension-plugin.version>
-        <jandex-maven-plugin.version>3.2.7</jandex-maven-plugin.version>
+        <jandex-maven-plugin.version>3.6.0</jandex-maven-plugin.version>
         <jakarta.activation-api.version>2.1.3</jakarta.activation-api.version>
         <rest-assured.version>5.5.1</rest-assured.version>
         <quarkus-amazon-services.version>3.9.1</quarkus-amazon-services.version>
@@ -165,8 +165,10 @@
         <jakarta.json-api.version>2.1.3</jakarta.json-api.version>
         <parsson.version>1.1.7</parsson.version>
         <testng.version>7.11.0</testng.version>
-        <quarkus-opensearch.version>3.1.2</quarkus-opensearch.version>
-        <org.eclipse.persistence.asm.version>9.7.1</org.eclipse.persistence.asm.version>
+        <!-- 3.3.x is the line built against Quarkus 3.33 (brings opensearch-java 3.8.0);
+             3.4.x targets Quarkus 3.34+. Raise together with quarkus.platform.version. -->
+        <quarkus-opensearch.version>3.3.2</quarkus-opensearch.version>
+        <org.eclipse.persistence.asm.version>9.10.0</org.eclipse.persistence.asm.version>
         <quarkus.opentelmetry.kafka.client.version>2.14.0-alpha</quarkus.opentelmetry.kafka.client.version>
         <quarkus-bucket4j.version>1.0.7</quarkus-bucket4j.version>
         <quarkus-azure-storage-blob.version>1.2.1</quarkus-azure-storage-blob.version>
@@ -267,12 +269,6 @@
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter</artifactId>
                 <version>5.11.4</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-junit-jupiter</artifactId>
-                <version>${mockito-junit-jupiter.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -546,6 +542,16 @@
             <dependency>
                 <groupId>io.quarkiverse.opensearch</groupId>
                 <artifactId>quarkus-opensearch-transport-apache</artifactId>
+                <version>${quarkus-opensearch.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkiverse.opensearch</groupId>
+                <artifactId>quarkus-opensearch-rest-client</artifactId>
+                <version>${quarkus-opensearch.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkiverse.opensearch</groupId>
+                <artifactId>quarkus-opensearch-rest-client-deployment</artifactId>
                 <version>${quarkus-opensearch.version}</version>
             </dependency>
             <dependency>
