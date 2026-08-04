@@ -137,7 +137,13 @@
         <json-schema-validator.version>5.3.2</json-schema-validator.version>
         <org.json.version>20260719</org.json.version>
         <handy-uri-templates.version>2.1.8</handy-uri-templates.version>
-        <jetcd-core.version>0.8.6</jetcd-core.version>
+        <!-- Do NOT raise to 0.8.6: jetcd-grpc switched to Vert.x 5 there
+             (io.vertx.core.internal.ContextInternal), while Quarkus 3.33 ships Vert.x
+             4.5.x with io.vertx.core.impl.ContextInternal. The app compiles and every test
+             passes, then the container dies at runtime with NoClassDefFoundError when the
+             Kafka Streams global state store initialises. Raise this only together with a
+             Quarkus release built on Vert.x 5. -->
+        <jetcd-core.version>0.8.5</jetcd-core.version>
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <!--    When updating, need to keep the graalvm.version in sync.     -->
