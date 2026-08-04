@@ -91,45 +91,53 @@
         <com.networknt.json.schema.version>1.5.6</com.networknt.json.schema.version>
 
         <jacoco.version>0.8.15</jacoco.version>
-        <lombok.version>1.18.42</lombok.version>
+        <lombok.version>1.18.46</lombok.version>
         <javax.annotation-api.version>1.3.2</javax.annotation-api.version>
-        <io.swagger.version>2.2.29</io.swagger.version>
+        <io.swagger.version>2.2.53</io.swagger.version>
+        <!-- Stays on the 25.0 polyglot line to match GraalVM for JDK 25.0 (the CI base
+             image and the local toolchain). 25.2.x polyglot expects a 25.2 GraalVM;
+             mixing them drops Truffle to interpreter-only. -->
         <graalvm.version>25.0.4</graalvm.version>
-        <chrisvest.stormpot.version>4.1</chrisvest.stormpot.version>
+        <chrisvest.stormpot.version>4.2</chrisvest.stormpot.version>
         <guava-retrying.version>2.0.0</guava-retrying.version>
-        <commons.collections.version>4.5.0-M3</commons.collections.version>
-        <commons-codec.version>1.18.0</commons-codec.version>
-        <commons-lang3.version>3.18.0</commons-lang3.version>
-        <commons-io.version>2.18.0</commons-io.version>
+        <commons.collections.version>4.5.0</commons.collections.version>
+        <commons-codec.version>1.22.1</commons-codec.version>
+        <commons-lang3.version>3.20.0</commons-lang3.version>
+        <commons-io.version>2.22.0</commons-io.version>
         <commons-math3.version>3.6.1</commons-math3.version>
         <jakarta.websocket.version>2.2.0</jakarta.websocket.version>
         <titanium-json-ld.version>1.4.1</titanium-json-ld.version>
         <jakarta.json-api.version>1.1.4</jakarta.json-api.version>
         <jakarta.json.version>2.1.3</jakarta.json.version>
-        <slf4j.version>2.0.13</slf4j.version>
+        <!-- Kept in step with quarkus-bom (2.0.17). A lower pin here would mean
+             compiling against an older API than the runtime provides. 2.1.x is still
+             alpha. -->
+        <slf4j.version>2.0.17</slf4j.version>
 
         <!-- XML <-> JSON conversion dependency versions -->
         <jakarta.xml.bind.version>4.0.2</jakarta.xml.bind.version>
         <eclipse-persistence.version>4.0.7</eclipse-persistence.version>
-        <google.zxing.version>3.5.3</google.zxing.version> <!-- QR Code Generation -->
-        <jinjava.version>2.7.2</jinjava.version> <!-- java json engine -->
+        <google.zxing.version>3.5.4</google.zxing.version> <!-- QR Code Generation -->
+        <jinjava.version>2.8.4</jinjava.version> <!-- java json engine -->
 
-        <elasticsearch-java-client.version>9.0.0-beta1</elasticsearch-java-client.version>
+        <elasticsearch-java-client.version>9.4.5</elasticsearch-java-client.version>
 
-        <!-- test lib versions -->
+        <!-- test lib versions.
+             JUnit and Mockito are deliberately NOT pinned here: quarkus-bom manages
+             junit-jupiter 6.0.3 and mockito 5.21.0, and pinning older versions is how
+             test-time surprises get built in. -->
         <junit4.version>4.13.2</junit4.version>
-        <junit.version>5.9.2</junit.version>
         <hamcrest-junit.version>2.0.0.0</hamcrest-junit.version>
         <powermock-api-mockito2.version>2.0.9</powermock-api-mockito2.version>
-        <io.jsonwebtoken.version>0.12.6</io.jsonwebtoken.version>
+        <io.jsonwebtoken.version>0.13.0</io.jsonwebtoken.version>
         <!-- 3.5.x required for tests on Java 25 (older versions choke on class-file 69) -->
         <surefire-plugin.version>3.5.6</surefire-plugin.version>
         <failsafe-plugin.version>3.5.6</failsafe-plugin.version>
         <barcode4j.version>2.1</barcode4j.version>
         <json-schema-validator.version>5.3.2</json-schema-validator.version>
-        <org.json.version>20250107</org.json.version>
+        <org.json.version>20260719</org.json.version>
         <handy-uri-templates.version>2.1.8</handy-uri-templates.version>
-        <jetcd-core.version>0.8.5</jetcd-core.version>
+        <jetcd-core.version>0.8.6</jetcd-core.version>
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <!--    When updating, need to keep the graalvm.version in sync.     -->
@@ -149,10 +157,11 @@
         <quarkus-extension-plugin.version>0.26.1</quarkus-extension-plugin.version>
         <jandex-maven-plugin.version>3.6.0</jandex-maven-plugin.version>
         <jakarta.activation-api.version>2.1.3</jakarta.activation-api.version>
-        <rest-assured.version>5.5.1</rest-assured.version>
+        <!-- In step with quarkus-bom; 6.x is a major with its own Quarkus support matrix. -->
+        <rest-assured.version>5.5.6</rest-assured.version>
         <quarkus-amazon-services.version>3.9.1</quarkus-amazon-services.version>
         <joda-time.version>2.13.0</joda-time.version>
-        <reactor-core.version>3.8.0-M1</reactor-core.version>
+        <reactor-core.version>3.8.6</reactor-core.version>
         <!--
             Tracks the platform. JobRunr's Quarkus extension embeds build steps against a
             specific Quarkus API: 7.4.1 fails on 3.33 with "Run time configuration
@@ -163,15 +172,19 @@
         -->
         <jobrunr.version>8.7.1</jobrunr.version>
         <jakarta.json-api.version>2.1.3</jakarta.json-api.version>
-        <parsson.version>1.1.7</parsson.version>
-        <testng.version>7.11.0</testng.version>
+        <parsson.version>1.1.9</parsson.version>
+        <testng.version>7.12.0</testng.version>
         <!-- 3.3.x is the line built against Quarkus 3.33 (brings opensearch-java 3.8.0);
              3.4.x targets Quarkus 3.34+. Raise together with quarkus.platform.version. -->
         <quarkus-opensearch.version>3.3.2</quarkus-opensearch.version>
         <org.eclipse.persistence.asm.version>9.10.0</org.eclipse.persistence.asm.version>
-        <quarkus.opentelmetry.kafka.client.version>2.14.0-alpha</quarkus.opentelmetry.kafka.client.version>
+        <!-- Must match the OpenTelemetry instrumentation line quarkus-bom ships
+             (2.23.0-alpha against OTel core 1.57.0), NOT the newest release: newer
+             instrumentation expects a newer core. The -alpha suffix is how the OTel
+             project publishes all instrumentation artifacts, not a prerelease marker. -->
+        <quarkus.opentelmetry.kafka.client.version>2.23.0-alpha</quarkus.opentelmetry.kafka.client.version>
         <quarkus-bucket4j.version>1.0.7</quarkus-bucket4j.version>
-        <quarkus-azure-storage-blob.version>1.2.1</quarkus-azure-storage-blob.version>
+        <quarkus-azure-storage-blob.version>1.2.5</quarkus-azure-storage-blob.version>
         <javax.validation.api.version>2.0.1.Final</javax.validation.api.version>
     </properties>
 
@@ -265,12 +278,6 @@
                 <scope>test</scope>
             </dependency>
             -->
-            <dependency>
-                <groupId>org.junit.jupiter</groupId>
-                <artifactId>junit-jupiter</artifactId>
-                <version>5.11.4</version>
-                <scope>test</scope>
-            </dependency>
             <dependency>
                 <groupId>javax.inject</groupId>
                 <artifactId>javax.inject</artifactId>
