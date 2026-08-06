@@ -91,7 +91,6 @@
         <com.networknt.json.schema.version>1.5.6</com.networknt.json.schema.version>
 
         <jacoco.version>0.8.15</jacoco.version>
-        <lombok.version>1.18.46</lombok.version>
         <javax.annotation-api.version>1.3.2</javax.annotation-api.version>
         <io.swagger.version>2.2.53</io.swagger.version>
         <!-- Stays on the 25.0 polyglot line to match GraalVM for JDK 25.0 (the CI base
@@ -149,10 +148,15 @@
         <!--    When updating, need to keep the graalvm.version in sync.     -->
         <!--
             Quarkus LTS. 3.27 reached end of support on 24 Sep 2026; 3.33 is the current
-            LTS, supported to Mar 2027. The upgrade also unpins quarkus-mcp-server, which
-            tracks the platform closely — 1.11.0+ requires 3.33 and fails on 3.27 with
-            NoSuchMethodError Gizmo.withDebugInfo(boolean), which is why openepcis-ai-mcp
-            is held at 1.9.0.
+            LTS, supported to Mar 2027.
+            
+            Note for openepcis-ai-mcp, which is NOT built from this reactor:
+            quarkus-mcp-server tracks the platform closely and is not compatible across
+            Quarkus versions; the failure mode is a build-time NoSuchMethodError inside
+            the extension's own processor. It is pinned in that module's own pom, now at
+            1.13.1 to match 3.33, which is also the newest version on Maven Central. It
+            cannot be unpinned: io.quarkiverse.mcp is not managed by the Quarkus platform
+            BOM, so there is no version to inherit.
         -->
         <quarkus.platform.version>3.33.3</quarkus.platform.version>
         <!-- Pin patched Jackson 2.x to override the version inherited from quarkus-bom
@@ -316,11 +320,6 @@
                 <groupId>net.sf.barcode4j</groupId>
                 <artifactId>barcode4j</artifactId>
                 <version>${barcode4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>${lombok.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.orbitz.consul</groupId>
