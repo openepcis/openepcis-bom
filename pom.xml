@@ -159,6 +159,28 @@
             BOM, so there is no version to inherit.
         -->
         <quarkus.platform.version>3.33.3</quarkus.platform.version>
+        <!--
+            Kept although no module in this build uses Lombok any more.
+
+            The BOM's dependencyManagement is a PUBLISHED contract: released artifacts
+            such as openepcis-document-validation-service 0.9.3 declare
+
+                <dependency>
+                  <groupId>org.projectlombok</groupId>
+                  <artifactId>lombok</artifactId>
+                </dependency>
+
+            with no version, and resolve it from here. Dropping this entry makes their
+            POMs unparseable (message: "'dependencies.dependency.version' for
+            org.projectlombok:lombok:jar is missing"), and Maven then silently skips
+            their transitive dependencies, which surfaced as 20 unrelated compile
+            errors in openepcis-document-converter.
+
+            To actually retire it, remove the versionless Lombok dependency from every
+            project that publishes against this BOM, release those, and only then drop
+            it here.
+        -->
+        <lombok.version>1.18.46</lombok.version>
         <!-- Pin patched Jackson 2.x to override the version inherited from quarkus-bom
              (security: Aikido issues 17824, 37190929 — 2.22.1 completes the incomplete
              GHSA-72hv-8253-57qq async-parser number-length fix). Keep on the 2.x line;
@@ -320,6 +342,11 @@
                 <groupId>net.sf.barcode4j</groupId>
                 <artifactId>barcode4j</artifactId>
                 <version>${barcode4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.orbitz.consul</groupId>
