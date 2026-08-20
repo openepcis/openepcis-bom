@@ -106,8 +106,17 @@
         <commons-math3.version>3.6.1</commons-math3.version>
         <jakarta.websocket.version>2.2.0</jakarta.websocket.version>
         <titanium-json-ld.version>1.4.1</titanium-json-ld.version>
-        <jakarta.json-api.version>1.1.4</jakarta.json-api.version>
-        <jakarta.json.version>2.1.3</jakarta.json.version>
+        <!-- org.glassfish:jakarta.json (the old API+impl bundle) ENDED at 2.0.1:
+             afterwards it split into jakarta.json:jakarta.json-api plus
+             org.eclipse.parsson:parsson (both managed below). The previous 2.1.3
+             pin pointed at a GAV that was never published, so the first module
+             pulling the bundle transitively (e.g. via titanium/iron) failed
+             resolution. Prefer the split artifacts in new code; this pin only
+             keeps TRANSITIVE occurrences resolvable. NOTE: the stale duplicate
+             jakarta.json-api.version=1.1.4 that used to sit here was dead — the
+             2.1.3 definition further down wins (last property definition in a
+             pom overwrites earlier ones). -->
+        <jakarta.json.version>2.0.1</jakarta.json.version>
         <!-- Kept in step with quarkus-bom (2.0.17). A lower pin here would mean
              compiling against an older API than the runtime provides. 2.1.x is still
              alpha. -->
