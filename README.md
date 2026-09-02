@@ -7,6 +7,7 @@
 [![Stars](https://img.shields.io/github/stars/openepcis/openepcis-bom?style=social)](https://github.com/openepcis/openepcis-bom)
 
 <h1 align="center">OpenEPCIS BOM</h1>
+
 This is the Maven parent for every [OpenEPCIS](https://openepcis.io) project. It centralizes dependency versions, the Java version, and build plugins, so all modules build consistently.
 
 ## Why
