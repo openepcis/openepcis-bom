@@ -210,7 +210,7 @@
         <!-- 3.4.x is the Quarkus 3 line (3.4.4: built against Quarkus 3.40.1, brings
              opensearch-java 3.11.0 / OpenSearch 3.10.1); 4.x targets Quarkus 4.
              Raise together with quarkus.platform.version. -->
-        <quarkus-opensearch.version>3.4.4</quarkus-opensearch.version>
+        <quarkus-opensearch.version>3.4.5</quarkus-opensearch.version>
         <org.eclipse.persistence.asm.version>9.11.0</org.eclipse.persistence.asm.version>
         <!-- Must match the OpenTelemetry instrumentation line quarkus-bom ships
              (2.28.1-alpha against OTel core 1.62.0), NOT the newest release: newer
