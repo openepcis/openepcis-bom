@@ -53,8 +53,8 @@ versions.
 |                 |                                                                                          |
 |-----------------|------------------------------------------------------------------------------------------|
 | Java            | 25. Modules should not set `source`, `target` or `release` on their own                  |
-| Quarkus         | 3.33.3 through `quarkus-bom`, plus the AWS services and CXF BOMs                         |
-| Jackson         | 2.22.1 through `jackson-bom`                                                             |
+| Quarkus         | 3.40.1.2 through `quarkus-bom`, plus the AWS services and CXF BOMs                         |
+| Jackson         | 2.22.4 through `jackson-bom`                                                             |
 | Other libraries | JSON-LD, JSON schema validation, Elasticsearch client, Swagger, commons                  |
 | Build plugins   | compiler, surefire, failsafe, JaCoCo, Jandex, Checkstyle, license, javadoc, sources, GPG |
 
