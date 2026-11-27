@@ -63,40 +63,40 @@
 
     <properties>
         <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
-        <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.16.0</maven-compiler-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>25</java.version>
         <maven.compiler.release>${java.version}</maven.compiler.release>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven-deploy-plugin.version>3.1.4</maven-deploy-plugin.version>
+        <maven-deploy-plugin.version>3.2.0</maven-deploy-plugin.version>
         <git-code-format-maven-plugin.version>5.3</git-code-format-maven-plugin.version>
         <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
-        <maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
-        <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
-        <maven-gpg-plugin.version>3.2.4</maven-gpg-plugin.version>
-        <checkstyle.version>10.16.0</checkstyle.version>
+        <maven-javadoc-plugin.version>3.12.0</maven-javadoc-plugin.version>
+        <maven-source-plugin.version>3.4.0</maven-source-plugin.version>
+        <maven-gpg-plugin.version>3.2.8</maven-gpg-plugin.version>
+        <checkstyle.version>10.26.1</checkstyle.version>
         <gpg.keyname>759F1D2BF6B65D135FAD2716A355F274126C92B8</gpg.keyname>
 
         <!-- 1.3.x is causing issues with quarkus native builds -->
         <com.networknt.json.schema.version>1.5.6</com.networknt.json.schema.version>
 
-        <jacoco.version>0.8.15</jacoco.version>
+        <jacoco.version>0.8.16</jacoco.version>
         <javax.annotation-api.version>1.3.2</javax.annotation-api.version>
         <io.swagger.version>2.2.53</io.swagger.version>
         <!-- Stays on the 25.0 polyglot line to match GraalVM for JDK 25.0 (the CI base
              image and the local toolchain). 25.2.x polyglot expects a 25.2 GraalVM;
              mixing them drops Truffle to interpreter-only. -->
-        <graalvm.version>25.0.4</graalvm.version>
-        <chrisvest.stormpot.version>4.2</chrisvest.stormpot.version>
+        <graalvm.version>25.0.5.1</graalvm.version>
+        <chrisvest.stormpot.version>4.2.1</chrisvest.stormpot.version>
         <guava-retrying.version>2.0.0</guava-retrying.version>
-        <commons.collections.version>4.5.0</commons.collections.version>
-        <commons-codec.version>1.22.1</commons-codec.version>
-        <commons-lang3.version>3.20.0</commons-lang3.version>
+        <commons.collections.version>4.6.0</commons.collections.version>
+        <commons-codec.version>1.23.0</commons-codec.version>
+        <commons-lang3.version>3.22.0</commons-lang3.version>
         <commons-io.version>2.22.0</commons-io.version>
         <commons-math3.version>3.6.1</commons-math3.version>
         <jakarta.websocket.version>2.2.0</jakarta.websocket.version>
-        <titanium-json-ld.version>1.4.1</titanium-json-ld.version>
+        <titanium-json-ld.version>1.7.0</titanium-json-ld.version>
         <!-- org.glassfish:jakarta.json (the old API+impl bundle) ENDED at 2.0.1:
              afterwards it split into jakarta.json:jakarta.json-api plus
              org.eclipse.parsson:parsson (both managed below). The previous 2.1.3
@@ -111,15 +111,15 @@
         <!-- Kept in step with quarkus-bom (2.0.17). A lower pin here would mean
              compiling against an older API than the runtime provides. 2.1.x is still
              alpha. -->
-        <slf4j.version>2.0.17</slf4j.version>
+        <slf4j.version>2.0.20</slf4j.version>
 
         <!-- XML <-> JSON conversion dependency versions -->
-        <jakarta.xml.bind.version>4.0.2</jakarta.xml.bind.version>
+        <jakarta.xml.bind.version>4.0.5</jakarta.xml.bind.version>
         <eclipse-persistence.version>4.0.7</eclipse-persistence.version>
         <google.zxing.version>3.5.4</google.zxing.version> <!-- QR Code Generation -->
-        <jinjava.version>2.8.4</jinjava.version> <!-- java json engine -->
+        <jinjava.version>2.8.5</jinjava.version> <!-- java json engine -->
 
-        <elasticsearch-java-client.version>9.4.5</elasticsearch-java-client.version>
+        <elasticsearch-java-client.version>9.5.7</elasticsearch-java-client.version>
 
         <!-- test lib versions.
              JUnit and Mockito are deliberately NOT pinned here: quarkus-bom manages
@@ -130,11 +130,11 @@
         <powermock-api-mockito2.version>2.0.9</powermock-api-mockito2.version>
         <io.jsonwebtoken.version>0.13.0</io.jsonwebtoken.version>
         <!-- 3.5.x required for tests on Java 25 (older versions choke on class-file 69) -->
-        <surefire-plugin.version>3.5.6</surefire-plugin.version>
-        <failsafe-plugin.version>3.5.6</failsafe-plugin.version>
+        <surefire-plugin.version>3.6.1</surefire-plugin.version>
+        <failsafe-plugin.version>3.6.1</failsafe-plugin.version>
         <barcode4j.version>2.1</barcode4j.version>
         <json-schema-validator.version>5.3.2</json-schema-validator.version>
-        <org.json.version>20260719</org.json.version>
+        <org.json.version>20260814</org.json.version>
         <handy-uri-templates.version>2.1.8</handy-uri-templates.version>
         <!-- Do NOT raise to 0.8.6: jetcd-grpc switched to Vert.x 5 there
              (io.vertx.core.internal.ContextInternal), while Quarkus 3.33 ships Vert.x
@@ -147,18 +147,19 @@
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <!--    When updating, need to keep the graalvm.version in sync.     -->
         <!--
-            Quarkus LTS. 3.27 reached end of support on 24 Sep 2026; 3.33 is the current
-            LTS, supported to Mar 2027.
+            Quarkus LTS. 3.40 is the current LTS (released 30 Sep 2026); 3.33 stays
+            supported to Mar 2027.
             
             Note for openepcis-ai-mcp, which is NOT built from this reactor:
             quarkus-mcp-server tracks the platform closely and is not compatible across
             Quarkus versions; the failure mode is a build-time NoSuchMethodError inside
             the extension's own processor. It is pinned in that module's own pom, now at
-            1.13.1 to match 3.33, which is also the newest version on Maven Central. It
+            1.13.1 to match 3.33; raise it to the release built for 3.40 when that module
+            moves to this bom. It
             cannot be unpinned: io.quarkiverse.mcp is not managed by the Quarkus platform
             BOM, so there is no version to inherit.
         -->
-        <quarkus.platform.version>3.33.3</quarkus.platform.version>
+        <quarkus.platform.version>3.40.1.2</quarkus.platform.version>
         <!--
             Kept although no module in this build uses Lombok any more.
 
@@ -180,41 +181,41 @@
             project that publishes against this BOM, release those, and only then drop
             it here.
         -->
-        <lombok.version>1.18.46</lombok.version>
+        <lombok.version>1.18.48</lombok.version>
         <!-- Pin patched Jackson 2.x to override the version inherited from quarkus-bom
              (security: Aikido issues 17824, 37190929 — 2.22.1 completes the incomplete
              GHSA-72hv-8253-57qq async-parser number-length fix). Keep on the 2.x line;
              Quarkus is built on Jackson 2.x. -->
-        <jackson.version>2.22.1</jackson.version>
+        <jackson.version>2.22.4</jackson.version>
         <quarkus-extension-plugin.version>0.26.1</quarkus-extension-plugin.version>
-        <jandex-maven-plugin.version>3.6.0</jandex-maven-plugin.version>
-        <jakarta.activation-api.version>2.1.3</jakarta.activation-api.version>
+        <jandex-maven-plugin.version>3.6.1</jandex-maven-plugin.version>
+        <jakarta.activation-api.version>2.1.4</jakarta.activation-api.version>
         <!-- In step with quarkus-bom; 6.x is a major with its own Quarkus support matrix. -->
-        <rest-assured.version>5.5.6</rest-assured.version>
-        <quarkus-amazon-services.version>3.9.1</quarkus-amazon-services.version>
+        <rest-assured.version>6.0.1</rest-assured.version>
+        <quarkus-amazon-services.version>3.22.1</quarkus-amazon-services.version>
         <joda-time.version>2.13.0</joda-time.version>
-        <reactor-core.version>3.8.6</reactor-core.version>
+        <reactor-core.version>3.8.9</reactor-core.version>
         <!--
             Tracks the platform. JobRunr's Quarkus extension embeds build steps against a
             specific Quarkus API: 7.4.1 fails on 3.33 with "Run time configuration
             JobRunrRuntimeConfiguration can only be injected in a @Recorder constructor as a
             RuntimeValue" from JobRunrExtensionProcessor, because newer Quarkus requires
-            recorder config to be wrapped. 8.7.1 is built against quarkus-core 3.33.2.
+            recorder config to be wrapped. 9.0.5 is built against quarkus-core 3.40.1.1.
             Raise this together with quarkus.platform.version, not independently.
         -->
-        <jobrunr.version>8.7.1</jobrunr.version>
+        <jobrunr.version>9.0.5</jobrunr.version>
         <jakarta.json-api.version>2.1.3</jakarta.json-api.version>
         <parsson.version>1.1.9</parsson.version>
         <testng.version>7.12.0</testng.version>
-        <!-- 3.3.x is the line built against Quarkus 3.33 (brings opensearch-java 3.8.0);
-             3.4.x targets Quarkus 3.34+. Raise together with quarkus.platform.version. -->
-        <quarkus-opensearch.version>3.3.2</quarkus-opensearch.version>
-        <org.eclipse.persistence.asm.version>9.10.0</org.eclipse.persistence.asm.version>
+        <!-- 3.4.x targets Quarkus 3.34+ (brings opensearch-java 3.8.0); 3.3.x was the line
+             for Quarkus 3.33. Raise together with quarkus.platform.version. -->
+        <quarkus-opensearch.version>3.4.3</quarkus-opensearch.version>
+        <org.eclipse.persistence.asm.version>9.11.0</org.eclipse.persistence.asm.version>
         <!-- Must match the OpenTelemetry instrumentation line quarkus-bom ships
-             (2.23.0-alpha against OTel core 1.57.0), NOT the newest release: newer
+             (2.28.1-alpha against OTel core 1.62.0), NOT the newest release: newer
              instrumentation expects a newer core. The -alpha suffix is how the OTel
              project publishes all instrumentation artifacts, not a prerelease marker. -->
-        <quarkus.opentelmetry.kafka.client.version>2.23.0-alpha</quarkus.opentelmetry.kafka.client.version>
+        <quarkus.opentelmetry.kafka.client.version>2.28.1-alpha</quarkus.opentelmetry.kafka.client.version>
         <quarkus-bucket4j.version>1.0.7</quarkus-bucket4j.version>
         <quarkus-azure-storage-blob.version>1.2.5</quarkus-azure-storage-blob.version>
         <javax.validation.api.version>2.0.1.Final</javax.validation.api.version>
@@ -808,7 +809,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.4.0</version>
+                <version>3.11.0</version>
             </plugin>
 
             <plugin>
@@ -826,7 +827,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
-                <version>2.8.1</version>
+                <version>2.25.3</version>
             </plugin>
         </plugins>
     </build>
@@ -861,7 +862,7 @@
                     <plugin>
                         <groupId>com.mycila</groupId>
                         <artifactId>license-maven-plugin</artifactId>
-                        <version>4.2</version>
+                        <version>4.3</version>
                         <configuration>
                             <properties>
                                 <owner>benelog GmbH &amp; Co. KG</owner>
